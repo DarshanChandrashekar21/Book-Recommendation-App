@@ -10,16 +10,16 @@ st.set_page_config(
 )
 
 # -----------------------------
-# Sidebar Navigation (Optional)
+# Sidebar Navigation
 # -----------------------------
 with st.sidebar:
     st.title("📚 MyBookBuddy")
     nav = st.radio("Navigate", ["🏠 Home", "📖 Recommender"])
     if nav == "📖 Recommender":
-        st.switch_page("pages/1_Book_Recommender.py")  # Path must be correct in your folder
+        st.switch_page("pages/1_Book_Recommender.py")
 
 # -----------------------------
-# Custom CSS for Dark Theme
+# Custom CSS (Dark Theme)
 # -----------------------------
 st.markdown("""
     <style>
@@ -65,7 +65,6 @@ Your smart, AI-powered reading companion. Discover your next favorite book based
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# CTA Button
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     st.markdown("<div class='cta-button'>", unsafe_allow_html=True)
@@ -73,7 +72,7 @@ with col2:
     st.markdown("</div>", unsafe_allow_html=True)
 
 if go:
-    st.switch_page("pages/1_Book_Recommender.py")  # Make sure this exists
+    st.switch_page("pages/1_Book_Recommender.py")
 
 st.markdown("<br><hr><br>", unsafe_allow_html=True)
 
@@ -83,10 +82,10 @@ st.markdown("<br><hr><br>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center;'>✨ Why MyBookBuddy?</h2>", unsafe_allow_html=True)
 
 features = [
-    "🔍 Personalized book suggestions tailored just for you",
-    "🤖 Powered by Machine Learning for smarter discovery",
-    "📸 Book covers, authors & more – visually rich results",
-    "🎯 No signup needed – just pick and discover!"
+    "🔍 Personalized book recommendations tailored to your taste",
+    "🤖 Machine Learning–powered collaborative filtering",
+    "📚 Explore books by similarity and popularity",
+    "🎯 No login required — simple & fast discovery"
 ]
 
 for feat in features:
@@ -95,73 +94,51 @@ for feat in features:
 st.markdown("<br><hr><br>", unsafe_allow_html=True)
 
 # -----------------------------
-# Testimonials with Names and Circular Avatars
+# Testimonials (Anonymous)
 # -----------------------------
-st.markdown("<h3 style='text-align: center;'>💬 What Our Users Say</h3>", unsafe_allow_html=True)
-
-# CSS for circular images
-st.markdown("""
-    <style>
-    .testimonial-img {
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        margin-bottom: 10px;
-    }
-    .testimonial-name {
-        font-weight: bold;
-        font-size: 16px;
-        color: #F1F1F1;
-        text-align: center;
-    }
-    .testimonial-text {
-        font-size: 14px;
-        color: #DDD;
-        text-align: center;
-    }
-    </style>
-""", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center;'>💬 What Readers Say</h3>", unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown("""
         <div style='text-align: center;'>
-            <img src='https://avatars.githubusercontent.com/u/155903223?v=4' class='testimonial-img'>
-            <div class='testimonial-name'>Syed Hammad</div>
-            <div class='testimonial-text'>“Found books I never thought I'd love. Brilliant!”<br>⭐️⭐️⭐️⭐️⭐️</div>
+            <div style='font-weight:bold;'>Avid Reader</div>
+            <div style='font-size:14px;color:#DDD;'>
+                “Discovered books I never imagined I would like.”<br>⭐️⭐️⭐️⭐️⭐️
+            </div>
         </div>
     """, unsafe_allow_html=True)
 
 with col2:
     st.markdown("""
         <div style='text-align: center;'>
-            <img src='https://randomuser.me/api/portraits/men/46.jpg' class='testimonial-img'>
-            <div class='testimonial-name'>Ahmed Rehman</div>
-            <div class='testimonial-text'>“MyBookBuddy understands my taste better than my friends.”<br>⭐️⭐️⭐️⭐️⭐️</div>
+            <div style='font-weight:bold;'>Book Enthusiast</div>
+            <div style='font-size:14px;color:#DDD;'>
+                “Recommendations feel accurate and thoughtful.”<br>⭐️⭐️⭐️⭐️⭐️
+            </div>
         </div>
     """, unsafe_allow_html=True)
 
 with col3:
     st.markdown("""
         <div style='text-align: center;'>
-            <img src='https://avatars.githubusercontent.com/u/151808307?v=4' class='testimonial-img'>
-            <div class='testimonial-name'>Umer Abbasi</div>
-            <div class='testimonial-text'>“Love the clean interface and fast suggestions.”<br>⭐️⭐️⭐️⭐️</div>
+            <div style='font-weight:bold;'>Student Reader</div>
+            <div style='font-size:14px;color:#DDD;'>
+                “Clean interface and very easy to use.”<br>⭐️⭐️⭐️⭐️
+            </div>
         </div>
     """, unsafe_allow_html=True)
-
 
 # -----------------------------
 # Footer
 # -----------------------------
-
 st.markdown("<br>", unsafe_allow_html=True)
 st.markdown("<hr style='border: 0.5px solid #444;'>", unsafe_allow_html=True)
 st.markdown("""
     <div style='text-align: center; font-size: 13px; color: #888'>
-        Built By Ehtesham with ❤️ using <strong>Streamlit</strong> & <strong>Machine Learning</strong> <br>
-        © 2025 MyBookBuddy Inc.
+        Designed & Developed by <strong>Darshan Chandrashekar</strong><br>
+        Powered by <strong>Streamlit</strong> & <strong>Machine Learning</strong><br>
+        © 2025 MyBookBuddy. All rights reserved.
     </div>
 """, unsafe_allow_html=True)
